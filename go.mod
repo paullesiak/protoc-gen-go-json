@@ -1,4 +1,4 @@
-module github.com/mitchellh/protoc-gen-go-json
+module github.com/paullesiak/protoc-gen-go-json
 
 go 1.12
 

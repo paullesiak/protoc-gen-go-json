@@ -76,12 +76,12 @@ import (
 
 	messageTemplate = template.Must(template.New("message").Parse(`
 // MarshalJSON implements json.Marshaler
-func (msg *{{.GoIdent.GoName}}) MarshalJSON() ([]byte,error) {
+func (msg {{.GoIdent.GoName}}) MarshalJSON() ([]byte,error) {
 	return protojson.MarshalOptions {
 		UseEnumNumbers: {{.EnumsAsInts}},
 		EmitUnpopulated: {{.EmitDefaults}},
 		UseProtoNames: {{.OrigName}},
-	}.Marshal(msg)
+	}.Marshal(&msg)
 }
 
 // UnmarshalJSON implements json.Unmarshaler

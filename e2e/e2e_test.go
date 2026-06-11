@@ -17,8 +17,8 @@ func TestTable(t *testing.T) {
 
 		// Value and Expected MUST be pointers to structs. If Expected is
 		// nil, then it is expected to be identical to Value.
-		Value    interface{}
-		Expected interface{}
+		Value    any
+		Expected any
 	}{
 		{
 			"basic",
